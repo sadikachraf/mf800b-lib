@@ -1,6 +1,6 @@
-# MF800B Libya Ecommerce PDP
+# 4G/5G Pocket WiFi Libya Ecommerce PDP
 
-Mobile-first Arabic ecommerce product page for the **MF800B 4G LTE Portable WiFi** router in Libya.
+Mobile-first Arabic ecommerce product page for the **4G/5G Pocket WiFi** router (model MF800B) in Libya.
 
 ## Commercial configuration
 

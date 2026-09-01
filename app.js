@@ -3,7 +3,7 @@
 // Commercial and integration values live here so every price and payload stays in sync.
 const PRODUCT_CONFIG = Object.freeze({
   sku: 'DRP70733',
-  name: '4G Pocket WiFi (MF800B)',
+  name: '4G/5G Pocket WiFi',
   orderPrefix: 'MIFI-LY-',
   country: 'Libya',
   currency: 'LYD',
@@ -15,7 +15,7 @@ const PRODUCT_CONFIG = Object.freeze({
     single: {
       id: 'single',
       label: 'جهاز واحد',
-      description: 'راوتر 4G واحد للحوش أو التنقل',
+      description: 'راوتر 4G/5G واحد للحوش أو التنقل',
       quantity: 1,
       price: 299,
       unitPrice: 299,
