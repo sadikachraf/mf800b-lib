@@ -26,11 +26,30 @@ The storefront sends:
 - `InitiateCheckout` on first order intent
 - `Lead` after a valid COD form submission
 
-COD submission is **not** treated as a completed sale. No frontend purchase-completion event is fired.
+COD submission is **not** treated as a completed sale. No frontend `Purchase` event is fired.
 
 ## Order handling
 
 The order form preserves the shared Google Sheets payload shape, Libyan phone normalization/validation, order references, disabled submitting state, and recent duplicate prevention. Localhost QA skips the external sheet write and logs the payload in the browser console.
+
+## Approved image set
+
+The ten production WebPs are direct, composition-preserving conversions of the approved 1254×1254 PNG masters supplied in `MF800B-final-images-for-codex.zip`. No image generation, redesign, crop, or text overlay is used.
+
+The eight-slide gallery order is:
+
+1. `hero-power-cut-main.webp`
+2. `real-product-packaging.webp`
+3. `how-it-works.webp`
+4. `multi-device-wifi.webp`
+5. `portability.webp`
+6. `features.webp`
+7. `sim-explainer.webp`
+8. `work-study.webp`
+
+Supporting section assets are `power-cut-lifestyle.webp` and `travel-car.webp`. Mobile uses horizontal scroll-snap with pagination; desktop uses a square main image and clickable square thumbnails. Every image is displayed at 1:1 with `object-fit: contain`.
+
+See `IMAGE_PROMPTS.md` for the approved asset manifest and provenance note.
 
 ## Local preview
 
@@ -41,10 +60,3 @@ python3 -m http.server 4173
 ```
 
 Then open `http://localhost:4173`.
-
-## Gallery
-
-The production gallery contains eight 1080×1080 WebP assets. Mobile uses horizontal scroll-snap with pagination; desktop uses a square main image and clickable square thumbnails. All product imagery is displayed without cover-cropping the MF800B or its packaging.
-
-See `IMAGE_PROMPTS.md` for the asset provenance and production prompts.
-
