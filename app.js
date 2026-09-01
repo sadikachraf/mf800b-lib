@@ -3,7 +3,7 @@
 // Commercial and integration values live here so every price and payload stays in sync.
 const PRODUCT_CONFIG = Object.freeze({
   sku: 'MF800B-LY',
-  name: 'MF800B 4G LTE Portable WiFi',
+  name: '4G Pocket WiFi (MF800B)',
   orderPrefix: 'MIFI-LY-',
   country: 'Libya',
   currency: 'LYD',
@@ -15,10 +15,10 @@ const PRODUCT_CONFIG = Object.freeze({
     single: {
       id: 'single',
       label: 'جهاز واحد',
-      description: 'MF800B واحد للحوش أو التنقل',
+      description: 'راوتر 4G واحد للحوش أو التنقل',
       quantity: 1,
-      price: 349,
-      unitPrice: 349,
+      price: 299,
+      unitPrice: 299,
       tag: null
     },
     double: {
@@ -26,8 +26,8 @@ const PRODUCT_CONFIG = Object.freeze({
       label: 'جهازين',
       description: 'واحد للحوش وواحد للشغل أو السفر',
       quantity: 2,
-      price: 599,
-      unitPrice: 299.5,
+      price: 499,
+      unitPrice: 249.5,
       tag: 'الأوفر'
     }
   }
