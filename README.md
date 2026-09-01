@@ -6,7 +6,7 @@ Mobile-first Arabic ecommerce product page for the **MF800B 4G LTE Portable WiFi
 
 All commercial and integration values are centralized in `PRODUCT_CONFIG` at the top of `app.js`:
 
-- SKU: `MF800B-LY`
+- SKU: `DRP70733`
 - Order prefix: `MIFI-LY-`
 - Country: `Libya`
 - Currency: `LYD`

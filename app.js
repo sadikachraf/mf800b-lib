@@ -2,7 +2,7 @@
 
 // Commercial and integration values live here so every price and payload stays in sync.
 const PRODUCT_CONFIG = Object.freeze({
-  sku: 'MF800B-LY',
+  sku: 'DRP70733',
   name: '4G Pocket WiFi (MF800B)',
   orderPrefix: 'MIFI-LY-',
   country: 'Libya',
