@@ -49,6 +49,8 @@ The eight-slide gallery order is:
 
 Supporting section assets are `power-cut-lifestyle.webp` and `travel-car.webp`. Mobile uses horizontal scroll-snap with pagination; desktop uses a square main image and clickable square thumbnails. Every image is displayed at 1:1 with `object-fit: contain`.
 
+Five customer photo reviews are stored in `images/reviews/`. The supplied 1254×1254 PNG originals were resized to 960×960 and compressed as WebP files for fast loading. They appear immediately after the main gallery as a five-image desktop grid and a swipeable mobile strip.
+
 See `IMAGE_PROMPTS.md` for the approved asset manifest and provenance note.
 
 ## Local preview
