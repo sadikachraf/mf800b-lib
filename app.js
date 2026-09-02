@@ -374,9 +374,47 @@ function initStickyButton() {
   protectedZones.forEach((zone) => observer.observe(zone));
 }
 
+function initReviewCarousel() {
+  const track = document.querySelector('[data-review-track]');
+  const cards = [...document.querySelectorAll('[data-review-card]')];
+  const dots = [...document.querySelectorAll('[data-review-dot]')];
+  const previous = document.querySelector('[data-review-prev]');
+  const next = document.querySelector('[data-review-next]');
+  if (!track || !cards.length || !previous || !next) return;
+
+  const updateFromScroll = () => {
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    const progress = maxScroll ? track.scrollLeft / maxScroll : 0;
+    const currentIndex = Math.round(progress * (cards.length - 1));
+    dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === currentIndex));
+    previous.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= maxScroll - 2;
+  };
+  const move = (direction) => {
+    const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+    const distance = cards[0].getBoundingClientRect().width + gap;
+    track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  };
+
+  let scrollFrame = 0;
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  track.addEventListener('scroll', () => {
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(updateFromScroll);
+  }, { passive: true });
+  track.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  updateFromScroll();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderOffers();
   initGallery();
+  initReviewCarousel();
   initStickyButton();
 
   document.querySelectorAll('.track-checkout').forEach((link) => {

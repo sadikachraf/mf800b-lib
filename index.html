@@ -146,35 +146,46 @@
         <section class="real-reviews" aria-labelledby="real-reviews-title">
           <div class="real-reviews-heading">
             <div>
-              <span>تجارب حقيقية بالصور</span>
+              <span><i aria-hidden="true"></i> تجارب حقيقية بالصور</span>
               <h2 id="real-reviews-title">شوف الجهاز في الاستعمال اليومي</h2>
               <p>صور فعلية للمنتج عند الزبائن — في الحوش، الشغل، السيارة والتنقل.</p>
             </div>
-            <strong><b>5</b> صور من الزبائن</strong>
+            <div class="review-carousel-actions">
+              <span><b>5</b> صور من الزبائن</span>
+              <button type="button" data-review-prev aria-label="عرض الصورة السابقة">‹</button>
+              <button type="button" data-review-next aria-label="عرض الصورة التالية">›</button>
+            </div>
           </div>
-          <div class="review-photo-grid" role="list" aria-label="صور المنتج من الزبائن">
-            <figure role="listitem">
+          <div class="review-carousel-shell">
+            <div class="review-photo-grid" data-review-track role="list" aria-label="صور المنتج من الزبائن" tabindex="0">
+            <figure role="listitem" data-review-card data-index="01">
               <img src="images/reviews/customer-home.webp" width="960" height="960" alt="زبون يمسك راوتر 4G/5G Pocket WiFi وهو يعمل في الحوش" loading="lazy" decoding="async">
-              <figcaption><span>في الحوش</span><b>حجمه واضح في اليد</b></figcaption>
+              <figcaption><span>في الحوش</span><b>حجمه واضح في اليد</b><small>صورة فعلية من زبون</small></figcaption>
             </figure>
-            <figure role="listitem">
+            <figure role="listitem" data-review-card data-index="02">
               <img src="images/reviews/customer-work.webp" width="960" height="960" alt="راوتر 4G/5G Pocket WiFi يعمل بجانب هاتف ولابتوب" loading="lazy" decoding="async">
-              <figcaption><span>مع اللابتوب</span><b>جاهز للشغل والدراسة</b></figcaption>
+              <figcaption><span>مع اللابتوب</span><b>جاهز للشغل والدراسة</b><small>صورة فعلية من زبون</small></figcaption>
             </figure>
-            <figure role="listitem">
+            <figure role="listitem" data-review-card data-index="03">
               <img src="images/reviews/customer-car.webp" width="960" height="960" alt="راوتر 4G/5G Pocket WiFi يعمل داخل السيارة بجانب الهاتف" loading="lazy" decoding="async">
-              <figcaption><span>في السيارة</span><b>شبكتك معاك في الطريق</b></figcaption>
+              <figcaption><span>في السيارة</span><b>شبكتك معاك في الطريق</b><small>صورة فعلية من زبون</small></figcaption>
             </figure>
-            <figure role="listitem">
+            <figure role="listitem" data-review-card data-index="04">
               <img src="images/reviews/customer-travel.webp" width="960" height="960" alt="راوتر 4G/5G Pocket WiFi داخل حقيبة صغيرة للتنقل" loading="lazy" decoding="async">
-              <figcaption><span>وقت التنقل</span><b>يدخل بسهولة في الشنطة</b></figcaption>
+              <figcaption><span>وقت التنقل</span><b>يدخل بسهولة في الشنطة</b><small>صورة فعلية من زبون</small></figcaption>
             </figure>
-            <figure role="listitem">
+            <figure role="listitem" data-review-card data-index="05">
               <img src="images/reviews/customer-desk.webp" width="960" height="960" alt="راوتر 4G/5G Pocket WiFi يشحن على مكتب بجانب هاتف ولابتوب" loading="lazy" decoding="async">
-              <figcaption><span>على المكتب</span><b>يشحن ويخدم مع أجهزتك</b></figcaption>
+              <figcaption><span>على المكتب</span><b>يشحن ويخدم مع أجهزتك</b><small>صورة فعلية من زبون</small></figcaption>
             </figure>
+            </div>
           </div>
-          <p class="review-swipe-hint">اسحب باش تشوف باقي الصور ←</p>
+          <div class="review-carousel-footer">
+            <div class="review-progress" aria-hidden="true">
+              <i class="active" data-review-dot></i><i data-review-dot></i><i data-review-dot></i><i data-review-dot></i><i data-review-dot></i>
+            </div>
+            <p>اسحب يمين ويسار باش تشوف باقي الصور</p>
+          </div>
         </section>
       </div>
     </section>
