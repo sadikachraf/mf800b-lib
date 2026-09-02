@@ -274,8 +274,8 @@ footer { padding: 30px 0 92px; color: #9babc0; background: #030d20; }
   .pdp-grid.container { width: 100%; max-width: none; }
   .real-reviews { width: calc(100% - 20px); margin: 16px auto 0; padding: 27px 0 18px; border-radius: 24px; }
   .real-reviews-heading { align-items: start; flex-direction: column; gap: 14px; margin: 0 18px 19px; }
-  .real-reviews-heading h2 { max-width: 310px; font-size: 29px; }
-  .real-reviews-heading p { max-width: 310px; font-size: 11px; line-height: 1.75; }
+  .real-reviews-heading h2 { max-width: 310px; font-size: 26px; }
+  .real-reviews-heading p { max-width: 310px; font-size: 12px; line-height: 1.75; }
   .review-carousel-actions { width: 100%; justify-content: flex-end; }
   .review-carousel-actions button { width: 39px; height: 39px; font-size: 26px; }
   .review-carousel-shell::before, .review-carousel-shell::after { width: 22px; }
@@ -295,46 +295,50 @@ footer { padding: 30px 0 92px; color: #9babc0; background: #030d20; }
   .brand small { font-size: 7px; }
   .header-cta { padding: 7px 13px; font-size: 10px; }
   .product-panel { padding-top: 13px; }
-  .descriptor { margin-bottom: 6px; padding: 4px 8px; font-size: 9px; }
-  .product-panel h1 { margin-bottom: 8px; font-size: clamp(30px, 9vw, 38px); line-height: 1.12; }
-  .product-lead { margin-bottom: 11px; font-size: 13px; line-height: 1.72; }
+  .descriptor { margin-bottom: 7px; padding: 5px 9px; font-size: 10px; }
+  .product-panel h1 { margin-bottom: 9px; font-size: clamp(26px, 7.2vw, 29px); line-height: 1.17; letter-spacing: -.02em; }
+  .product-lead { margin-bottom: 12px; font-size: 14px; line-height: 1.75; }
   .proof-row { gap: 5px; margin-bottom: 10px; }
-  .proof-row span { padding: 7px 4px; font-size: 7px; }
-  .proof-row b { font-size: 10px; }
+  .proof-row span { padding: 8px 5px; font-size: 9px; }
+  .proof-row b { font-size: 12px; }
   .price-block { margin-bottom: 12px; padding: 12px 14px; border-radius: 15px; }
   .price-block > div b { font-size: 38px; }
   .price-block > div strong { font-size: 14px; }
-  .price-block > span, .price-block small { font-size: 9px; }
+  .price-block > span, .price-block small { font-size: 10px; }
   .offer-heading { align-items: start; flex-direction: column; gap: 1px; }
-  .offer-heading b { font-size: 13px; }
-  .offer-heading span { font-size: 9px; }
-  .offer-option { grid-template-columns: auto minmax(0,1fr) auto; gap: 8px; padding: 11px 9px; border-radius: 13px; }
-  .offer-info b { font-size: 13px; }
-  .offer-info small { font-size: 9px; }
-  .offer-price { min-width: 73px; }
-  .offer-price b { font-size: 14px; }
-  .offer-price small, .unit-price { font-size: 8px; }
-  .benefit-list { padding: 9px 10px; }
-  .benefit-list li { font-size: 11px; }
+  .offer-heading b { font-size: 16px; }
+  .offer-heading span { font-size: 10px; line-height: 1.6; }
+  .offer-option { grid-template-columns: auto minmax(0,1fr) auto; gap: 9px; padding: 13px 11px; border-radius: 14px; }
+  .offer-info { line-height: 1.55; }
+  .offer-info b { font-size: 16px; }
+  .offer-info small { font-size: 11px; }
+  .offer-price { min-width: 82px; }
+  .offer-price b { font-size: 17px; }
+  .offer-price small, .unit-price { font-size: 9px; }
+  .benefit-list { padding: 11px 12px; }
+  .benefit-list li { font-size: 12px; line-height: 1.65; }
   .order-form { padding: 12px; border-radius: 15px; }
   .field-grid { grid-template-columns: 1fr; gap: 7px; }
+  .field-grid label { font-size: 12px; }
   .field-grid input, .field-grid select { min-height: 44px; font-size: 16px; }
-  .form-title b { font-size: 14px; }
-  .form-title span { font-size: 8px; }
-  .submit-button { min-height: 50px; font-size: 14px; }
-  .trust-strip span { padding: 7px 2px; font-size: 8px; }
+  .form-title b { font-size: 17px; }
+  .form-title span { font-size: 10px; }
+  .form-error { font-size: 11px; }
+  .submit-button { min-height: 51px; font-size: 16px; }
+  .trust-strip span { padding: 8px 3px; font-size: 9px; }
+  .speed-note { font-size: 10px; }
   .content-section { padding: 46px 0; }
-  .section-copy h2, .section-heading h2, .faq-intro h2, .requirements-card h2, .final-copy h2 { font-size: 27px; }
-  .section-copy > p { font-size: 13px; }
+  .section-copy h2, .section-heading h2, .faq-intro h2, .requirements-card h2, .final-copy h2 { font-size: 26px; }
+  .section-copy > p { font-size: 14px; }
   .content-image { border-radius: 18px; }
   .steps-list li { grid-template-columns: 38px 1fr; padding: 10px; }
   .steps-list li > b { width: 38px; height: 38px; }
   .steps-list strong { font-size: 13px; }
-  .steps-list span { font-size: 10px; }
+  .steps-list span { font-size: 11px; }
   .use-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
   .use-cards article { padding: 14px; border-radius: 15px; }
   .use-cards h3 { font-size: 15px; }
-  .use-cards p { font-size: 10px; }
+  .use-cards p { font-size: 11px; }
   .comparison-cards { grid-template-columns: 1fr; }
   .comparison-cards article { padding: 18px; }
   .comparison-cards h3 { font-size: 19px; }
@@ -342,19 +346,19 @@ footer { padding: 30px 0 92px; color: #9babc0; background: #030d20; }
   .features-copy .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec-grid { gap: 7px; }
   .spec-grid div { padding: 9px; }
-  .spec-grid b { font-size: 11px; }
-  .spec-grid span { font-size: 9px; }
+  .spec-grid b { font-size: 12px; }
+  .spec-grid span { font-size: 10px; }
   .requirements-section { padding-top: 0; }
   .requirements-card { width: calc(100% - 28px); padding: 20px; border-radius: 19px; }
   .requirements-card ul { grid-template-columns: 1fr; gap: 7px; margin-block: 15px 10px; }
   .requirements-card li { padding: 9px; font-size: 11px; }
-  .faq-list summary { padding: 13px 14px 13px 48px; font-size: 12px; }
-  .faq-list details p { padding: 0 14px 14px; font-size: 11px; }
+  .faq-list summary { padding: 14px 14px 14px 48px; font-size: 13px; }
+  .faq-list details p { padding: 0 14px 14px; font-size: 12px; }
   .final-order { padding: 46px 0; }
   .final-form-card { padding: 12px; border-radius: 17px; }
   .footer-inner { align-items: start; flex-direction: column; gap: 8px; }
-  .mobile-sticky { position: fixed; z-index: 55; right: 10px; bottom: calc(8px + env(safe-area-inset-bottom)); left: 10px; height: 50px; display: flex; align-items: center; justify-content: space-between; padding: 0 17px; border: 1px solid rgba(255,255,255,.20); border-radius: 14px; color: #fff; background: linear-gradient(90deg, #0b54ba, #1269dc); box-shadow: 0 12px 34px rgba(6,21,47,.34); font-size: 13px; font-weight: 900; transition: transform .22s ease, opacity .22s ease; }
-  .mobile-sticky b { font-size: 15px; }
+  .mobile-sticky { position: fixed; z-index: 55; right: 10px; bottom: calc(8px + env(safe-area-inset-bottom)); left: 10px; height: 50px; display: flex; align-items: center; justify-content: space-between; padding: 0 17px; border: 1px solid rgba(255,255,255,.20); border-radius: 14px; color: #fff; background: linear-gradient(90deg, #0b54ba, #1269dc); box-shadow: 0 12px 34px rgba(6,21,47,.34); font-size: 14px; font-weight: 900; transition: transform .22s ease, opacity .22s ease; }
+  .mobile-sticky b { font-size: 16px; }
   .mobile-sticky i { font-style: normal; }
   .mobile-sticky.is-hidden { transform: translateY(calc(100% + 18px)); opacity: 0; pointer-events: none; }
   .success-card { padding: 22px 17px; border-radius: 19px; }
@@ -364,13 +368,13 @@ footer { padding: 30px 0 92px; color: #9babc0; background: #030d20; }
   .container { width: calc(100% - 22px); }
   .real-reviews { width: calc(100% - 14px); }
   .product-panel { width: calc(100% - 22px); }
-  .product-panel h1 { font-size: 29px; }
-  .product-lead { font-size: 12px; }
+  .product-panel h1 { font-size: 26px; }
+  .product-lead { font-size: 13px; }
   .offer-option { gap: 6px; padding-inline: 8px; }
   .offer-radio { width: 19px; height: 19px; }
-  .offer-price { min-width: 66px; }
-  .offer-price b { font-size: 13px; }
-  .trust-strip span { font-size: 7.5px; }
+  .offer-price { min-width: 74px; }
+  .offer-price b { font-size: 16px; }
+  .trust-strip span { font-size: 8.5px; }
   .requirements-card { width: calc(100% - 22px); }
 }
 
