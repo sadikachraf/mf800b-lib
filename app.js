@@ -47,18 +47,24 @@ function money(value) {
   return new Intl.NumberFormat('ar-LY', { maximumFractionDigits: 1 }).format(value);
 }
 
-function track(eventName, data = {}) {
-  if (typeof window.fbq === 'function') window.fbq('track', eventName, data);
+function track(eventName, data = {}, eventId = '') {
+  if (typeof window.fbq !== 'function') return;
+  if (eventId) {
+    window.fbq('track', eventName, data, { eventID: eventId });
+    return;
+  }
+  window.fbq('track', eventName, data);
 }
 
-function commerceData(offer) {
+function commerceData(offer, orderId = '') {
   return {
     value: offer.price,
     currency: PRODUCT_CONFIG.currency,
     content_ids: [PRODUCT_CONFIG.sku],
     content_name: PRODUCT_CONFIG.name,
     content_type: 'product',
-    num_items: offer.quantity
+    num_items: offer.quantity,
+    ...(orderId ? { order_id: orderId } : {})
   };
 }
 
@@ -345,10 +351,12 @@ async function submitOrder(event) {
   const payload = buildPayload(values, offer, reference);
 
   fireInitiateCheckout();
-  track('Lead', commerceData(offer));
   try {
     await postOrder(payload);
     rememberOrder(signature, reference);
+    const completedOrder = commerceData(offer, reference);
+    track('Lead', completedOrder, reference);
+    track('Purchase', completedOrder, reference);
     form.reset();
     showSuccess(reference, submit);
   } catch (_) {

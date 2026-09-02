@@ -24,9 +24,10 @@ The storefront sends:
 
 - `PageView` on page load
 - `InitiateCheckout` on first order intent
-- `Lead` after a valid COD form submission
+- `Lead` after a successful COD order registration
+- `Purchase` after a successful COD order registration, with the order value, quantity, SKU, currency, and unique order reference
 
-COD submission is **not** treated as a completed sale. No frontend `Purchase` event is fired.
+The unique order reference is also sent as the browser event ID so the same order can be deduplicated if server-side tracking is added later.
 
 ## Order handling
 
