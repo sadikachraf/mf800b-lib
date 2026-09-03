@@ -15,10 +15,12 @@ const PRODUCT_CONFIG = Object.freeze({
     single: {
       id: 'single',
       label: 'جهاز واحد',
-      description: 'راوتر 4G/5G واحد للحوش أو التنقل',
+      description: 'للاستعمال الشخصي والحركة اليومية',
       quantity: 1,
-      price: 299,
-      unitPrice: 299,
+      price: 279,
+      unitPrice: 279,
+      originalPrice: null,
+      saving: null,
       tag: null
     },
     double: {
@@ -26,14 +28,27 @@ const PRODUCT_CONFIG = Object.freeze({
       label: 'جهازين',
       description: 'واحد للحوش وواحد للشغل أو السفر',
       quantity: 2,
-      price: 499,
-      unitPrice: 249.5,
-      tag: 'الأوفر'
+      price: 449,
+      unitPrice: 224.5,
+      originalPrice: 558,
+      saving: 109,
+      tag: 'الأكثر طلباً'
+    },
+    triple: {
+      id: 'triple',
+      label: '3 أجهزة',
+      description: 'أفضل قيمة للعائلة أو أكثر من مكان',
+      quantity: 3,
+      price: 599,
+      unitPrice: 199.7,
+      originalPrice: 837,
+      saving: 238,
+      tag: 'أقوى توفير'
     }
   }
 });
 
-let selectedOfferId = 'single';
+let selectedOfferId = 'double';
 let checkoutTracked = false;
 let currentGalleryIndex = 0;
 let galleryScrollFrame = 0;
@@ -78,14 +93,22 @@ function offerMarkup(offer) {
   const unit = offer.quantity > 1
     ? `<span class="unit-price">${money(offer.unitPrice)} د.ل للقطعة</span>`
     : '';
+  const saving = offer.saving
+    ? `<span class="offer-saving">وفّر ${money(offer.saving)} د.ل</span>`
+    : '';
+  const originalPrice = offer.originalPrice
+    ? `<del>${money(offer.originalPrice)} د.ل</del>`
+    : '';
   return `
     <span class="offer-radio" aria-hidden="true"></span>
     <span class="offer-info">
       <b>${offer.label}</b>
       <small>${offer.description}</small>
       ${unit}
+      ${saving}
     </span>
     <span class="offer-price">
+      ${originalPrice}
       <b>${money(offer.price)} ${PRODUCT_CONFIG.currencyLabel}</b>
       <small>${offer.quantity === 1 ? 'جهاز واحد' : `${offer.quantity} أجهزة`}</small>
     </span>

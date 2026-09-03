@@ -11,8 +11,9 @@ All commercial and integration values are centralized in `PRODUCT_CONFIG` at the
 - Country: `Libya`
 - Currency: `LYD`
 - Starting batch quantity (internal): `155`
-- 1 device: `299 LYD`
-- 2 devices: `499 LYD` (`249.5 LYD` per device)
+- 1 device: `279 LYD`
+- 2 devices: `449 LYD` (`224.5 LYD` per device, saving `109 LYD`)
+- 3 devices: `599 LYD` (`199.7 LYD` per device, saving `238 LYD`)
 - Google Sheets endpoint: shared Libya order endpoint
 - Meta pixels: `778731385018899` and `1298885441635850`
 
