@@ -17,7 +17,7 @@ All commercial and integration values are centralized in `PRODUCT_CONFIG` at the
 - Google Sheets endpoint: shared Libya order endpoint
 - Meta pixels: `778731385018899` and `1298885441635850`
 
-Prices shown in the offer cards, primary price, final order block, and mobile sticky button are rendered from this configuration.
+Prices shown in the offer cards, final order block, and mobile sticky button are rendered from this configuration.
 
 ## Tracking policy
 
